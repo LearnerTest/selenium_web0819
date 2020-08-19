@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="selenium自动化测试">
+    <test name ="extensReport">
+        <classes>
+            <class name ="com.imooc.SeleniumMaven">
+                <methods>
+                    <include name="UserLogin"/>
+                </methods>
+        </classes>
+    </test>
+    <listeners>
+        <!--<listener class-name="com.course.config.ExtentTestNGIReporterListener" />-->
+
+    </listeners>
+</suite>
