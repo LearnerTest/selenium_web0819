@@ -1,6 +1,7 @@
 package com.imooc;
 
 import com.google.common.io.Files;
+import com.imooc.runcase.LoginCase;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -15,7 +16,7 @@ public class TestngListerScreen extends TestListenerAdapter {
     @Override
     public void onTestFailure(ITestResult tr){
         System.out.println("失败的case");
-        TestngCase tc =(TestngCase)tr.getInstance();
+        LoginCase tc = (LoginCase) tr.getInstance();
         WebDriver driver = tc.driver;
         ScreenShot(driver);
         super.onTestFailure(tr);
