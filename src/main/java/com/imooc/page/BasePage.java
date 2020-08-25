@@ -17,11 +17,11 @@ public class BasePage {
     }
     public static By GetByLocal(String key){
         String Locator = ProUtil.GetValue("element",key);
-        logger.debug("定位信息的key值为："+key);
+        logger.info("定位信息的key值为："+key);
         String LocatorBy = Locator.split(">")[0];
         String LocatorValue = Locator.split(">")[1];
-        logger.debug("定位信息的方式为："+LocatorBy);
-        logger.debug("定位值为："+LocatorValue);
+        logger.info("定位信息的方式为："+LocatorBy);
+        logger.info("定位值为："+LocatorValue);
         if (LocatorBy.equals("id")){
             return By.id(LocatorValue);
         }else if(LocatorBy.equals("name")){

@@ -1,7 +1,5 @@
 package com.imooc;
 
-
-
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 import org.apache.log4j.Logger;
@@ -17,7 +15,7 @@ import org.testng.annotations.Test;
 
 
 @Listeners({TestngListerScreen.class})
-class TestngCase {
+public class TestngCase {
 
     static Logger logger = Logger.getLogger(TestngCase.class);
     static WebDriver driver;
@@ -32,7 +30,7 @@ class TestngCase {
     @AfterClass
     public void AfterClass() {
         driver.close();
-        SendEmail();
+//        SendEmail();
     }
 
     @Test

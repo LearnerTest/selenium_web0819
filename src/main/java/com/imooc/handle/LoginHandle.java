@@ -14,17 +14,17 @@ public class LoginHandle {
     }
 
     public void SendEmail(String email) {
-        logger.debug("输入的用户名："+email);
+        logger.info("输入的用户名："+email);
         loginPage.GetEmailElement().sendKeys(email);
     }
 
     public void SendPassword(String password) {
-        logger.debug("输入的密码："+password);
+        logger.info("输入的密码："+password);
         loginPage.GetPasswordElement().sendKeys(password);
     }
 
     public void ClickLogin() throws InterruptedException {
-        logger.debug("<<<<<<<--------------开始登录-------------->>>>>>");
+        logger.info("<<<<<<<--------------开始登录-------------->>>>>>");
         loginPage.GetLoginButtonElement().click();
         Thread.sleep(2000);
     }
@@ -33,5 +33,9 @@ public class LoginHandle {
         loginPage.MoveToElement(loginPage.GetUsePngElement());
         String UserName = loginPage.GetUseInfoElement().getText();
         return UserName;
+    }
+
+    public void ClickSigninButton(){
+        loginPage.GetSigninButtonElement().click();
     }
 }

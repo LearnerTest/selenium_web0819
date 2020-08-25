@@ -1,5 +1,2 @@
-2020-08-20 14:09:09 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:45) main com.imooc.TestngCase - 错误的密码 
-2020-08-20 14:11:07 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:45) main com.imooc.TestngCase - 错误的密码 
-2020-08-20 14:12:06 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:45) main com.imooc.TestngCase - 错误的密码 
-2020-08-20 15:11:09 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:48) main com.imooc.TestngCase - 错误的密码 
-2020-08-20 15:14:27 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:48) main com.imooc.TestngCase - 错误的密码 
+2020-08-24 09:54:49 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:46) main com.imooc.TestngCase - 错误的密码 
+2020-08-24 09:55:58 - [ ERROR ]  com.imooc.TestngCase.test02(TestngCase.java:46) main com.imooc.TestngCase - 错误的密码 
