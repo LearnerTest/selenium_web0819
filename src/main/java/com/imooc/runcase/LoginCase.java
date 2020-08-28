@@ -17,7 +17,7 @@ public class LoginCase extends BaseCase{
     static org.apache.log4j.Logger logger = Logger.getLogger(LoginCase.class);
 
     @Parameters({"test_url","browser"})
-    @BeforeClass
+    @BeforeClass(groups = "LoginSuccess", description = "测试准备工作")
     public void BeforeClass(String test_url,String browser) throws InterruptedException {
         logger.debug("初始化浏览器");
         driver = GetDriver(browser);
@@ -29,13 +29,13 @@ public class LoginCase extends BaseCase{
         Thread.sleep(3000);
     }
 
-    @AfterClass
-    public void AfterClass() {
-        driver.close();
-    }
+//    @AfterClass
+//    public void AfterClass() {
+//        driver.close();
+//    }
 
     @Parameters({"username","password"})
-    @Test
+    @Test(groups = "LoginSuccess", description = "用户成功登陆")
     public void LoginSuccess(String username,String password) throws InterruptedException {
         logger.debug("《--------------开始执行第一个case----------》");
         loginHandle.SendEmail(username);

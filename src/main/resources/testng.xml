@@ -2,34 +2,40 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-    <!--<test name="Test">-->
-    <!--<parameter name="test_url" value="https://www.imooc.com"/>-->
-    <!--<parameter name="username" value="18806525771"/>-->
-    <!--<parameter name="password" value="111111"/>-->
-    <!--<parameter name="browser" value="chrome"/>-->
-    <!--<classes>-->
-        <!--<class name="com.imooc.runcase.LoginCase" >-->
-            <!--<methods>-->
-                <!--<include name="LoginSuccess" ></include>-->
 
-            <!--</methods>-->
-        <!--</class>-->
-    <!--</classes>-->
-<!--</test>-->
-    <test name="Test1">
-        <parameter name="test_url" value="https://www.imooc.com"/>
-        <parameter name="username" value="18806525771"/>
-        <parameter name="password" value="111111"/>
-        <parameter name="browser" value="firefox"/>
+    <!--<test name="Test1">-->
+        <!--<parameter name="test_url" value="https://www.imooc.com"/>-->
+        <!--<parameter name="username" value="18806525771"/>-->
+        <!--<parameter name="password" value="ljfe19900701"/>-->
+        <!--<parameter name="browser" value="chrome"/>-->
+        <!--<classes>-->
+            <!--<class name="com.imooc.runcase.LoginCase" >-->
+                <!--<methods>-->
+                    <!--<include name="LoginSuccess" ></include>-->
+
+                <!--</methods>-->
+            <!--</class>-->
+        <!--</classes>-->
+    <!--</test>-->
+
+    <test name="cart">
+        <parameter name="coursename" value="剑指Java面试-Offer直通车"/>
+        <parameter name="test_url" value="http://coding.imooc.com/class/303.html"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.imooc.runcase.LoginCase" >
+            <class name="com.imooc.runcase.CourseCase" >
                 <methods>
-                    <include name="LoginFailed" ></include>
+                    <include name="AddCartSuccess" ></include>
+                    <!--<include name="TestAlreadyLogin"></include>-->
 
                 </methods>
             </class>
         </classes>
     </test>
+
+
+
+
     <listeners>
         <!--<listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
         <!--<listener class-name="com.imooc.extents.demo.ExtentTestNGIReporterListenerOld" />-->
