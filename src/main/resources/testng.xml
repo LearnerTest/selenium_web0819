@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
 
-    <!--<test name="Test1">-->
-        <!--<parameter name="test_url" value="https://www.imooc.com"/>-->
-        <!--<parameter name="username" value="18806525771"/>-->
-        <!--<parameter name="password" value="ljfe19900701"/>-->
-        <!--<parameter name="browser" value="chrome"/>-->
-        <!--<classes>-->
-            <!--<class name="com.imooc.runcase.LoginCase" >-->
-                <!--<methods>-->
-                    <!--<include name="LoginSuccess" ></include>-->
-
-                <!--</methods>-->
-            <!--</class>-->
-        <!--</classes>-->
-    <!--</test>-->
-
-    <test name="cart">
-        <parameter name="coursename" value="剑指Java面试-Offer直通车"/>
-        <parameter name="test_url" value="http://coding.imooc.com/class/303.html"/>
+    <test name="login">
+        <parameter name="test_url" value="https://www.imooc.com/login"/>
+        <parameter name="username" value="18806525771"/>
+        <parameter name="password" value="ljfe19900701"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.imooc.runcase.CourseCase" >
+            <class name="com.imooc.runcase.LoginCase">
                 <methods>
-                    <include name="AddCartSuccess" ></include>
-                    <!--<include name="TestAlreadyLogin"></include>-->
+                    <include name="LoginSuccess"></include>
 
                 </methods>
             </class>
         </classes>
     </test>
 
+    <!--<test name="cart">-->
+    <!--<parameter name="coursename" value="剑指Java面试-Offer直通车"/>-->
+    <!--<parameter name="test_url" value="http://coding.imooc.com/class/303.html"/>-->
+    <!--<parameter name="browser" value="chrome"/>-->
+    <!--<classes>-->
+        <!--<class name="com.imooc.runcase.CourseCase">-->
+            <!--<methods>-->
+                <!--<include name="AddCartSuccess"></include>-->
+                <!--&lt;!&ndash;<include name="TestAlreadyLogin"></include>&ndash;&gt;-->
 
+            <!--</methods>-->
+        <!--</class>-->
+    <!--</classes>-->
+    <!--&lt;!&ndash;</test>&ndash;&gt;-->
+
+    <test name="sure">
+        <parameter name="test_url" value="https://order.imooc.com/pay/confirm/goods_ids/1-454"/>
+        <parameter name="submit_title" value="确认订单"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.imooc.runcase.SureSubmitCase">
+                <methods>
+                    <include name="LoginSubmit"></include>
+                    <!--<include name="SureSubmit" ></include>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
     <listeners>
@@ -43,6 +55,7 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
         <listener class-name="com.imooc.util.TestCaseReport"></listener>
+        <!--<listener class-name="com.imooc.util.TestNGListennerSendEmail"></listener>-->
     </listeners>
 
 
